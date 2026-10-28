@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Millionaire Affiliate Traders — FP TRADER | Guia Completo</title>
+  <meta name="description" content="O guia gratuito para começar no mercado de afiliados de corretoras. Trading, Afiliados, Subafiliados e Marketing Digital por FP TRADER (Felipe Vieira).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-surface: #0d121d;
+      --bg-surface-elevated: #131b2a;
+      --bg-card: rgba(19, 27, 42, 0.7);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(0, 230, 118, 0.25);
+      
+      --accent-green: #00e676;
+      --accent-green-glow: rgba(0, 230, 118, 0.35);
+      --accent-gold: #f59e0b;
+      --accent-gold-light: #fbbf24;
+      --accent-cyan: #00e5ff;
+      
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 35px rgba(0, 230, 118, 0.15);
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(0, 230, 118, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(0, 229, 255, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* READING PROGRESS BAR */
+    #progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 1000;
+    }
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-green), var(--accent-gold));
+      box-shadow: 0 0 10px var(--accent-green);
+      transition: width 0.1s ease-out;
+    }
+
+    /* TOP NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(7, 9, 14, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, #00e676 0%, #00b0ff 100%);
+      color: #07090e;
+      font-weight: 900;
+      font-size: 0.8rem;
+      font-family: var(--font-display);
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.5px;
+    }
+    .brand-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #fff;
+      letter-spacing: -0.2px;
+    }
+    .brand-title span {
+      color: var(--accent-green);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: var(--font-display);
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-color);
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+      transform: translateY(-1px);
+    }
+    .btn-action-primary {
+      background: linear-gradient(135deg, #00e676, #00c853);
+      color: #07090e;
+      border: none;
+      font-weight: 700;
+      box-shadow: 0 2px 10px rgba(0, 230, 118, 0.3);
+    }
+    .btn-action-primary:hover {
+      background: linear-gradient(135deg, #00f07c, #00d85a);
+      color: #07090e;
+      box-shadow: 0 4px 16px rgba(0, 230, 118, 0.45);
+    }
+
+    /* CONTAINER & LAYOUT */
+    .main-wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem 1.5rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* SIDEBAR NAVIGATION */
+    .sidebar {
+      position: sticky;
+      top: 5rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-subtle);
+    }
+    .sidebar-heading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .nav-item a:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+    .nav-item a.active {
+      background: rgba(0, 230, 118, 0.12);
+      color: var(--accent-green);
+      font-weight: 600;
+      border-left: 3px solid var(--accent-green);
+    }
+    .nav-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .author-card-mini {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-green));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-family: var(--font-display);
+      color: #07090e;
+      font-size: 0.95rem;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+    }
+    .author-info-mini h4 {
+      font-size: 0.88rem;
+      color: #fff;
+      font-weight: 700;
+    }
+    .author-info-mini p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* CONTENT AREA */
+    .content-area {
+      min-width: 0;
+    }
+
+    /* HERO COVER SECTION */
+    .hero-section {
+      background: linear-gradient(135deg, rgba(13, 18, 29, 0.9) 0%, rgba(19, 27, 42, 0.7) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      margin-bottom: 3.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-glow);
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 230, 118, 0.1);
+      border: 1px solid rgba(0, 230, 118, 0.3);
+      color: var(--accent-green);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 2.75rem;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.8px;
+    }
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, #00e676 0%, #a7f3d0 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      font-weight: 400;
+    }
+    .hero-meta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+    .meta-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      font-weight: 500;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .cover-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 230, 118, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transform: perspective(1000px) rotateY(-6deg) rotateX(2deg);
+      transition: transform 0.4s ease;
+    }
+    .cover-card:hover {
+      transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+    }
+    .cover-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* SECTION STYLES */
+    .ebook-chapter {
+      margin-bottom: 4rem;
+      scroll-margin-top: 6rem;
+    }
+    .chapter-header {
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.25rem;
+    }
+    .chapter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 0.75rem;
+    }
+    .chapter-title {
+      font-family: var(--font-display);
+      font-size: 1.95rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.4px;
+    }
+    .prose p {
+      color: #cbd5e1;
+      font-size: 1.02rem;
+      margin-bottom: 1.25rem;
+    }
+    .prose strong {
+      color: #fff;
+    }
+
+    /* CARDS & HIGHLIGHT BOXES */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0 2rem 0;
+    }
+    .info-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .info-card:hover {
+      border-color: rgba(0, 230, 118, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .info-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+    }
+    .info-card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .info-card-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .badge-binary {
+      background: rgba(0, 229, 255, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+    }
+    .badge-crypto {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-gold);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .badge-forex {
+      background: rgba(0, 230, 118, 0.12);
+      color: var(--accent-green);
+      border: 1px solid rgba(0, 230, 118, 0.3);
+    }
+
+    .link-box {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .link-btn:hover {
+      background: rgba(0, 230, 118, 0.15);
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+    }
+    .link-btn .btn-icon {
+      font-size: 1rem;
+    }
+
+    /* CALLOUT BOXES */
+    .callout {
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      position: relative;
+    }
+    .callout-warning {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      border-left: 4px solid #ef4444;
+    }
+    .callout-warning h4 {
+      color: #f87171;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .callout-tip {
+      background: rgba(0, 230, 118, 0.08);
+      border: 1px solid rgba(0, 230, 118, 0.2);
+      border-left: 4px solid var(--accent-green);
+    }
+    .callout-tip h4 {
+      color: var(--accent-green);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* STEP LIST */
+    .step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 1.25rem 0;
+    }
+    .step-item {
+      display: flex;
+      gap: 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      align-items: flex-start;
+    }
+    .step-badge {
+      background: linear-gradient(135deg, var(--accent-green), #00b0ff);
+      color: #07090e;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 800;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-body {
+      flex: 1;
+    }
+    .step-body p {
+      margin-bottom: 4px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    .step-body a {
+      color: var(--accent-green);
+      word-break: break-all;
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      text-decoration: underline;
+    }
+
+    /* INTERACTIVE CHECKLIST (CAP 6) */
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 1.5rem 0;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+    .check-item:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .check-item.completed {
+      background: rgba(0, 230, 118, 0.08);
+      border-color: rgba(0, 230, 118, 0.4);
+    }
+    .check-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--accent-green);
+      cursor: pointer;
+    }
+    .check-day {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      min-width: 65px;
+    }
+    .check-text {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .check-item.completed .check-text {
+      text-decoration: line-through;
+      color: var(--text-dim);
+    }
+
+    /* CHANNELS GRID */
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .channel-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .channel-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.75rem;
+    }
+    .channel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .icon-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff; }
+    .icon-tk { background: #000; color: #fff; border: 1px solid #333; }
+    .icon-yt { background: #ff0000; color: #fff; }
+    .icon-tg { background: #229ED9; color: #fff; }
+    .icon-gd { background: #0F9D58; color: #fff; }
+
+    /* CONTACTS FOOTER */
+    .contacts-box {
+      background: linear-gradient(135deg, rgba(13, 18, 29, 0.95), rgba(19, 27, 42, 0.8));
+      border: 1px solid rgba(0, 230, 118, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-top: 4rem;
+      box-shadow: 0 0 35px rgba(0, 230, 118, 0.1);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.2s ease;
+    }
+    .contact-card:hover {
+      border-color: var(--accent-green);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2);
+    }
+    .contact-info h5 {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .contact-info p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* COPY TOAST */
+    #copy-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--accent-green);
+      color: #07090e;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+      display: none;
+      z-index: 1000;
+      animation: fadeIn 0.2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* PRINT STYLESHEET (PERFECT FOR PDF CONVERSION) */
+    @media print {
+      body {
+        background: #0b0f17 !important;
+        color: #e2e8f0 !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .navbar, #progress-container, .sidebar, .nav-actions, .hero-actions, .copy-btn, #copy-toast {
+        display: none !important;
+      }
+      .main-wrapper {
+        display: block !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .hero-section {
+        box-shadow: none !important;
+        border: 1px solid #334155 !important;
+        page-break-after: always;
+        break-after: page;
+        padding: 2.5rem !important;
+        margin-bottom: 0 !important;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr 220px !important;
+      }
+      .cover-card {
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      .ebook-chapter {
+        page-break-inside: avoid;
+        margin-bottom: 2rem !important;
+        padding-top: 1rem !important;
+      }
+      .page-break-before {
+        page-break-before: always;
+        break-before: page;
+      }
+      .info-card, .channel-card, .step-item, .check-item, .contacts-box {
+        background: #111827 !important;
+        border: 1px solid #374151 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+      }
+      .link-btn {
+        background: #1f2937 !important;
+        border: 1px solid #4b5563 !important;
+        color: #fff !important;
+      }
+      a {
+        text-decoration: underline !important;
+        color: #38bdf8 !important;
+      }
+      @page {
+        size: A4;
+        margin: 15mm 12mm 15mm 12mm;
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .main-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .sidebar {
+        display: none;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .cover-card {
+        max-width: 260px;
+        margin: 0 auto;
+        transform: none;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <a href="#" class="brand-group">
+      <span class="brand-badge">FP TRADER</span>
+      <span class="brand-title">Millionaire <span>Affiliate</span></span>
+    </a>
+    <div class="nav-actions">
+      <a href="Millionaire_Affiliate_Traders_FP_Trader.pdf" download="Millionaire_Affiliate_Traders_FP_Trader.pdf" class="btn-action" title="Baixar PDF Oficial">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Baixar PDF
+      </a>
+      <a href="#contatos" class="btn-action btn-action-primary">
+        Falar com Felipe
+      </a>
+    </div>
+  </header>
+
+  <div class="main-wrapper">
+    <!-- Sticky Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-heading">
+        <span>ÍNDICE DO GUIA</span>
+        <span style="font-size: 0.7rem; color: var(--accent-green);">6 CAPÍTULOS</span>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="#boas-vindas" class="active"><span class="nav-num">00</span> Boas-Vindas</a></li>
+        <li class="nav-item"><a href="#capitulo-1"><span class="nav-num">01</span> Mercado de Afiliados</a></li>
+        <li class="nav-item"><a href="#capitulo-2"><span class="nav-num">02</span> Opções Binárias</a></li>
+        <li class="nav-item"><a href="#capitulo-3"><span class="nav-num">03</span> Criptomoedas</a></li>
+        <li class="nav-item"><a href="#capitulo-4"><span class="nav-num">04</span> Forex</a></li>
+        <li class="nav-item"><a href="#capitulo-5"><span class="nav-num">05</span> Construir sua Rede</a></li>
+        <li class="nav-item"><a href="#capitulo-6"><span class="nav-num">06</span> Plano de Ação (7 Dias)</a></li>
+        <li class="nav-item"><a href="#contatos"><span class="nav-num">07</span> Contatos Oficiais</a></li>
+        <li class="nav-item"><a href="#aviso"><span class="nav-num">08</span> Aviso Legal</a></li>
+      </ul>
+
+      <div class="author-card-mini">
+        <div class="author-avatar">FP</div>
+        <div class="author-info-mini">
+          <h4>Felipe Vieira</h4>
+          <p>FP TRADER • Autor</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content Area -->
+    <main class="content-area">
+
+      <!-- HERO COVER SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="hero-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Ebook Oficial Gratuito
+            </div>
+            <h1 class="hero-title">
+              MILLIONAIRE <br>
+              <span class="gradient-text">AFFILIATE TRADERS</span>
+            </h1>
+            <p class="hero-subtitle">
+              O guia passo a passo para começar no mercado de afiliados e subafiliados de corretoras mundiais de Trading.
+            </p>
+
+            <div class="hero-meta-badges">
+              <span class="meta-tag">Trading</span>
+              <span class="meta-tag">Afiliados & Subafiliados</span>
+              <span class="meta-tag">Opções Binárias</span>
+              <span class="meta-tag">Cripto & Forex</span>
+              <span class="meta-tag">Marketing Digital</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#boas-vindas" class="btn-action btn-action-primary" style="padding: 10px 22px; font-size: 0.95rem;">
+                Iniciar Leitura
+              </a>
+              <a href="Millionaire_Affiliate_Traders_FP_Trader.pdf" download="Millionaire_Affiliate_Traders_FP_Trader.pdf" class="btn-action" style="padding: 10px 18px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Download em PDF
+              </a>
+            </div>
+          </div>
+
+          <div class="cover-card">
+            <img src="capa_ebook.png" alt="Capa Millionaire Affiliate Traders" id="book-cover-img" onerror="this.onerror=null; this.src='capa_ebook.jpg';">
+          </div>
+        </div>
+      </section>
+
+      <!-- BOAS-VINDAS -->
+      <section class="ebook-chapter" id="boas-vindas">
+        <div class="chapter-header">
+          <span class="chapter-badge">Introdução</span>
+          <h2 class="chapter-title">Boas-Vindas</h2>
+        </div>
+        <div class="prose">
+          <p><strong>Seja bem-vindo ao Millionaire Affiliate Traders!</strong></p>
+          <p>
+            Este material foi desenvolvido para quem deseja conhecer o mercado de afiliados de corretoras e aprender como iniciar sua jornada na divulgação de plataformas de trading.
+          </p>
+          <p>
+            Aqui você encontrará informações introdutórias sobre <strong>opções binárias, criptomoedas e Forex</strong>, além de links diretos para programas de afiliados e orientações práticas para começar a construir sua própria rede de indicações e parceiros.
+          </p>
+          <p>
+            Meu objetivo é compartilhar informações, facilitar seu acesso aos programas e ajudar você a entender os primeiros passos desse mercado promissor.
+          </p>
+          <div class="callout callout-tip">
+            <h4>💡 Dica Fundamental</h4>
+            <p style="margin: 0; color: #e2e8f0;">
+              Você não precisa começar sabendo tudo. O importante é estudar, conhecer as regras de cada plataforma e desenvolver suas estratégias com consistência e responsabilidade.
+            </p>
+          </div>
+          <p style="font-weight: 700; color: var(--accent-green); font-size: 1.15rem;">
+            Vamos começar!
+          </p>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 1 -->
+      <section class="ebook-chapter page-break-before" id="capitulo-1">
+        <div class="chapter-header">
+          <span class="chapter-badge">Capítulo 01</span>
+          <h2 class="chapter-title">Entenda o Mercado de Afiliados</h2>
+        </div>
+        <div class="prose">
+          <h3 style="color: #fff; margin: 1.5rem 0 0.5rem 0; font-size: 1.25rem;">O que é um afiliado?</h3>
+          <p>
+            Um afiliado é uma pessoa que divulga produtos ou serviços de uma empresa utilizando links de indicação exclusivos ou outros mecanismos de rastreamento (tracking).
+          </p>
+          <p>
+            Dependendo do programa, a empresa pode remunerar o afiliado por:
+          </p>
+          <ul style="margin: 0 0 1.25rem 1.5rem; color: #cbd5e1;">
+            <li><strong>Cadastros qualificados (CPA / CPL)</strong></li>
+            <li><strong>Atividades e depósitos realizados</strong> pelos usuários indicados</li>
+            <li><strong>Participação na receita (Revenue Share / RevShare)</strong> ou outros critérios previstos em contrato</li>
+          </ul>
+          <p>
+            Cada programa possui suas próprias regras, exigências, documentação e condições de pagamento.
+          </p>
+
+          <h3 style="color: #fff; margin: 2rem 0 0.5rem 0; font-size: 1.25rem;">O que é um subafiliado?</h3>
+          <p>
+            Alguns programas permitem que parceiros indiquem outras pessoas para também participarem da divulgação do ecossistema.
+          </p>
+          <p>
+            Nesses casos, existe uma <strong>estrutura de subafiliados</strong>, na qual o parceiro recebe comissões percentuais relacionadas à atividade dos afiliados que ele próprio trouxe para o programa (geralmente entre 5% e 10% da comissão gerada).
+          </p>
+          <p>
+            A existência dessa possibilidade, os níveis de indicação e as comissões dependem das regras de cada empresa. Nem todas as corretoras oferecem esse modelo.
+          </p>
+
+          <h3 style="color: #fff; margin: 2rem 0 0.5rem 0; font-size: 1.25rem;">Como começar? (Fluxo de Entrada)</h3>
+          
+          <div class="step-list">
+            <div class="step-item">
+              <span class="step-badge">1</span>
+              <div class="step-body">
+                <strong>Escolha do Programa:</strong>
+                <p>Selecione o programa de afiliados que deseja conhecer de acordo com o nicho de atuação.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge">2</span>
+              <div class="step-body">
+                <strong>Termos e Requisitos:</strong>
+                <p>Leia atentamente as regras e verifique os requisitos de aprovação e tráfego aceito.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge">3</span>
+              <div class="step-body">
+                <strong>Cadastro Real:</strong>
+                <p>Complete seu cadastro com informações verdadeiras e documentos válidos para compliance.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge">4</span>
+              <div class="step-body">
+                <strong>Rastreamento & Parâmetros:</strong>
+                <p>Aprenda como funcionam os links de indicação, pixels e tags de rastreamento (afftrack/subids).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge">5</span>
+              <div class="step-body">
+                <strong>Produção de Conteúdo:</strong>
+                <p>Produza conteúdo educativo e divulgue de acordo com as políticas oficiais da plataforma.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge">6</span>
+              <div class="step-body">
+                <strong>Gestão e Otimização:</strong>
+                <p>Acompanhe os cliques, conversões e comissões no painel oficial do programa diariamente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout callout-warning">
+            <h4>⚠️ Importante</h4>
+            <p style="margin: 0; color: #fca5a5;">
+              Não existe garantia de aprovação, geração de comissões ou renda rápida. Os resultados dependem de diversos fatores, incluindo as regras vigentes do programa, a qualidade da sua divulgação e o engajamento do público.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 2 -->
+      <section class="ebook-chapter page-break-before" id="capitulo-2">
+        <div class="chapter-header">
+          <span class="chapter-badge">Capítulo 02</span>
+          <h2 class="chapter-title">Opções Binárias</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Opções binárias são instrumentos financeiros nos quais o resultado de uma operação depende de uma condição definida previamente, geralmente relacionada ao preço de um ativo subir ou descer em determinado intervalo de tempo (expiração).
+          </p>
+          <div class="callout callout-warning">
+            <h4>⚠️ Alerta de Alto Risco</h4>
+            <p style="margin: 0; color: #fca5a5;">
+              Esse mercado apresenta riscos elevados. É possível perder todo o capital colocado em uma operação, e a repetição contínua não garante recuperação de perdas. Nunca utilize dinheiro destinado a despesas essenciais.
+            </p>
+          </div>
+
+          <h3 style="color: #fff; margin: 1.5rem 0 0.5rem 0; font-size: 1.25rem;">O que estudar antes de operar ou divulgar?</h3>
+          <ul style="margin: 0 0 1.5rem 1.5rem; color: #cbd5e1;">
+            <li>Leitura básica de gráficos e movimentação de preço (Price Action)</li>
+            <li>Regiões de Suporte e Resistência</li>
+            <li>Identificação de tendências e volatilidade</li>
+            <li>Gerenciamento de risco e cálculo de stop</li>
+            <li>Diferença entre conta demonstrativa (demo) e conta real</li>
+            <li>Condições de saque, taxas e regras de cada plataforma</li>
+          </ul>
+
+          <h3 style="color: #fff; margin: 2rem 0 1rem 0; font-size: 1.35rem;">Programas e Plataformas Verificadas</h3>
+
+          <!-- PLATAFORMAS OPÇÕES BINÁRIAS -->
+          <div class="card-grid">
+
+            <!-- AVALON -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <span class="info-card-title">AVALON BROKER</span>
+                <span class="info-card-badge badge-binary">Binárias</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Plataforma de alta liquidez com opções de RevShare e CPA.</p>
+              <div class="link-box">
+                <a href="https://partner.avalonbroker.com/auth/signup?ref_id=749575&afftrack=EbookMAT" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Programa de Afiliados</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+                <a href="https://trade.avalonbroker.com/register?aff=749575&aff_model=revenue&afftrack=ebookMAT" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Cadastro para Trader</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- AFFSTORE (IQ OPTION, EXNOVA, ETC) -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <span class="info-card-title">AFFSTORE & HUBS</span>
+                <span class="info-card-badge badge-binary">Multi-Marcas</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Portal centralizador das marcas IQ Option, Exnova, SabioTrade e Quadcode.</p>
+              <div class="link-box">
+                <a href="https://affstore.com/?ref_id=384570&afftrack=ebookMAT" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Portal Geral de Afiliados</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+                <a href="https://affiliate.iqoption.net/redir/?aff=384570&aff_model=revenue&afftrack=ebookMAT" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>IQ Option — Cadastro Trader</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+                <a href="https://trade.exnova.com/pwa?aff=384570&aff_model=revenue&afftrack=ebookMAT" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Exnova — Cadastro Trader</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+                <a href="https://sabiotrade.com/?aff=384570&aff_model=revenue&afftrack=ebookMAT" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>SabioTrade — Mesa Proprietária</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+                <a href="https://quadcode.com/lp/affiliate_traffic?utm_source=384570&utm_medium=ebookMAT" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Quadcode — Tráfego de Afiliados</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- VYON TRADE ESPECIAL -->
+          <div class="info-card" style="margin-top: 1.5rem; border: 1px solid rgba(0, 229, 255, 0.3);">
+            <div class="info-card-header">
+              <div>
+                <span class="info-card-title">VYON TRADE — PASSO A PASSO ESPECIAL</span>
+                <p style="font-size: 0.85rem; color: var(--accent-cyan); margin-top: 3px;">O processo de acesso ao programa de afiliados é diferenciado.</p>
+              </div>
+              <span class="info-card-badge badge-binary">Processo Único</span>
+            </div>
+            
+            <div class="step-list" style="margin-top: 1rem;">
+              <div class="step-item">
+                <span class="step-badge">1</span>
+                <div class="step-body">
+                  <strong>Criar Conta na Corretora:</strong>
+                  <p>Acesse o link de cadastro oficial para criar seu registro inicial:</p>
+                  <a href="https://vyontrade.com/register?refid=B4iIAiC34c" target="_blank" rel="noopener noreferrer">https://vyontrade.com/register?refid=B4iIAiC34c</a>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-badge">2</span>
+                <div class="step-body">
+                  <strong>Ativação da Conta:</strong>
+                  <p>Siga as instruções internas da plataforma e conclua a ativação solicitada.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-badge">3</span>
+                <div class="step-body">
+                  <strong>Acessar o Painel de Afiliados:</strong>
+                  <p>Com o cadastro pronto, acesse a área de parceiros:</p>
+                  <a href="https://partners.vyontrade.com/estatisticas" target="_blank" rel="noopener noreferrer">https://partners.vyontrade.com/estatisticas</a>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-badge">4</span>
+                <div class="step-body">
+                  <strong>Mesmo Login:</strong>
+                  <p>Utilize o mesmo e-mail e senha criados na corretora para entrar no painel de parceiros.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-badge">5</span>
+                <div class="step-body">
+                  <strong>Obter seu Link:</strong>
+                  <p>Localize seu link exclusivo de indicação no menu e consulte as regras do programa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout callout-tip" style="margin-bottom: 0;">
+              <h4>📌 Observação Importante sobre a Vyon Trade</h4>
+              <p style="margin: 0; color: #cbd5e1; font-size: 0.9rem;">
+                Confirme os requisitos atuais de elegibilidade e participação diretamente com a equipe da corretora. Criar a conta de trader não garante aprovação automática imediata como parceiro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 3 -->
+      <section class="ebook-chapter page-break-before" id="capitulo-3">
+        <div class="chapter-header">
+          <span class="chapter-badge">Capítulo 03</span>
+          <h2 class="chapter-title">Criptomoedas</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Criptomoedas são ativos digitais descentralizados conhecidos pela alta volatilidade. As cotações oscilam rapidamente, abrindo oportunidades mas também riscos extras como alavancagem, liquidez de redes e segurança de custódia.
+          </p>
+
+          <h3 style="color: #fff; margin: 1.5rem 0 0.5rem 0; font-size: 1.25rem;">O que entender antes de divulgar ou operar:</h3>
+          <ul style="margin: 0 0 1.5rem 1.5rem; color: #cbd5e1;">
+            <li>Mecanismos de depósitos e saques em moeda fiduciária (BRL via PIX) e criptoativos</li>
+            <li>Segurança crítica: Autenticação de dois fatores (2FA) e chaves de segurança</li>
+            <li>Conferência rigorosa de redes blockchain (ERC20, TRC20, BSC, etc.) e endereços de destino</li>
+            <li>Taxas cobradas por operação (maker/taker) e taxas de saque de rede</li>
+            <li>Diferença entre mercado spot (à vista) e contratos futuros/derivativos</li>
+            <li>Riscos inerentes a manter custódia em exchanges centralizadas</li>
+          </ul>
+
+          <h3 style="color: #fff; margin: 2rem 0 1rem 0; font-size: 1.35rem;">Corretoras e Programas Oficiais</h3>
+
+          <div class="card-grid">
+
+            <!-- BINANCE -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <span class="info-card-title">BINANCE</span>
+                <span class="info-card-badge badge-crypto">Líder Global</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Maior volume diário de negociação e ecossistema robusto de produtos.</p>
+              <div class="link-box">
+                <a href="https://www.binance.com/register?ref=234579621" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Criar Conta Oficial</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+              </div>
+              <div style="margin-top: 10px; font-size: 0.8rem; color: var(--text-dim);">
+                Código de referência: <code style="color: var(--accent-gold);">234579621</code>
+              </div>
+            </div>
+
+            <!-- BYBIT -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <span class="info-card-title">BYBIT</span>
+                <span class="info-card-badge badge-crypto">Derivativos & Spot</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Forte presença global, campanhas de incentivo frequentes e alta velocidade de execução.</p>
+              <div class="link-box">
+                <a href="https://www.bybit.com/invite?ref=Q8Z4YP8&medium=referral&utm_campaign=evergreen" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Criar Conta com Recompensas</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+              </div>
+              <div style="margin-top: 10px; font-size: 0.8rem; color: var(--text-dim);">
+                Código de convite: <code style="color: var(--accent-gold);">Q8Z4YP8</code>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 4 -->
+      <section class="ebook-chapter page-break-before" id="capitulo-4">
+        <div class="chapter-header">
+          <span class="chapter-badge">Capítulo 04</span>
+          <h2 class="chapter-title">Forex (Mercado Cambial)</h2>
+        </div>
+        <div class="prose">
+          <p>
+            O Forex (Foreign Exchange) é o maior mercado financeiro do mundo, onde pares de moedas como EUR/USD, GBP/USD e USD/JPY são negociados 24 horas por dia durante a semana útil.
+          </p>
+          <p>
+            O preço de um par reflete a relação de valor entre duas moedas soberanas. Para trabalhar com Forex, domine os seguintes pilares:
+          </p>
+
+          <ul style="margin: 0 0 1.5rem 1.5rem; color: #cbd5e1;">
+            <li><strong>Pares de moedas:</strong> Principais (Majors), Secundários (Minors) e Exóticos</li>
+            <li><strong>Pips e Spreads:</strong> O custo de transação cobrado pela corretora na abertura</li>
+            <li><strong>Lotes e Dimensionamento:</strong> Lote padrão (1.0), mini lote (0.10) e micro lote (0.01)</li>
+            <li><strong>Margem e Alavancagem:</strong> Permite operar posições maiores que seu saldo, aumentando exponencialmente o risco</li>
+            <li><strong>Ordens de Execução:</strong> A mercado, Stop-loss (proteção) e Take-profit (alvo de ganho)</li>
+            <li><strong>Risco de Liquidação:</strong> Stop Out caso a margem livre chegue a níveis críticos</li>
+          </ul>
+
+          <h3 style="color: #fff; margin: 2rem 0 1rem 0; font-size: 1.35rem;">Corretoras e Links de Cadastro</h3>
+
+          <div class="card-grid">
+
+            <!-- FOTMARKETS -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <span class="info-card-title">FOTMARKETS</span>
+                <span class="info-card-badge badge-forex">Forex & CFDs</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Execução moderna, plataforma intuitiva e suporte para parceiros de tráfego.</p>
+              <div class="link-box">
+                <a href="https://secure.fot.co/links/go/1630" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Cadastro Oficial Fotmarkets</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- EXNESS -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <span class="info-card-title">EXNESS</span>
+                <span class="info-card-badge badge-forex">Spreads Ultrabaixos</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Uma das corretoras mais populares do planeta, com saques instantâneos e alto prestígio.</p>
+              <div class="link-box">
+                <a href="https://one.exnessonelink.com/a/k1ha2y86gr" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  <span>Cadastro Oficial Exness</span>
+                  <span class="btn-icon">↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 5 -->
+      <section class="ebook-chapter page-break-before" id="capitulo-5">
+        <div class="chapter-header">
+          <span class="chapter-badge">Capítulo 05</span>
+          <h2 class="chapter-title">Como Construir sua Rede de Afiliados</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Cadastrar-se em programas de afiliados é apenas o primeiro passo. A verdadeira escala acontece quando você aprende a <strong>produzir conteúdo com autoridade, gerar confiança e manter relacionamento consistente</strong>.
+          </p>
+
+          <h3 style="color: #fff; margin: 2rem 0 1rem 0; font-size: 1.25rem;">Estratégias por Canal de Divulgação</h3>
+
+          <div class="channel-grid">
+
+            <div class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon icon-ig">📷</div>
+                <h4 style="color: #fff; font-size: 1.05rem;">Instagram</h4>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Publique conteúdos educativos diários, carrosséis explicativos e Reels dinâmicos. Tenha uma chamada de ação (CTA) clara na Bio entregando seu ebook gratuito.
+              </p>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon icon-tk">🎵</div>
+                <h4 style="color: #fff; font-size: 1.05rem;">TikTok</h4>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Vídeos curtos de 30 a 60 segundos com dicas práticas para iniciantes, desmistificando o mercado e mostrando o processo de cadastro. Nunca prometa dinheiro fácil!
+              </p>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon icon-yt">▶️</div>
+                <h4 style="color: #fff; font-size: 1.05rem;">YouTube</h4>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                O melhor motor de busca para tutoriais aprofundados, reviews imparciais de corretoras e comparativos de taxas. Tráfego orgânico perene e altamente qualificado.
+              </p>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon icon-tg">✈️</div>
+                <h4 style="color: #fff; font-size: 1.05rem;">Telegram</h4>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Crie um canal oficial para nutrir a comunidade, entregar materiais exclusivos em PDF, avisos de mercado e responder às dúvidas mais frequentes dos inscritos.
+              </p>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon icon-gd">📁</div>
+                <h4 style="color: #fff; font-size: 1.05rem;">Google Drive</h4>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Mantenha links públicos com permissão liberada para quem prefere baixar os PDFs diretamente sem precisar entrar no Telegram.
+              </p>
+            </div>
+
+          </div>
+
+          <h3 style="color: #fff; margin: 2rem 0 0.8rem 0; font-size: 1.25rem;">Regras de Ouro na Divulgação de Links</h3>
+          <div class="step-list">
+            <div class="step-item">
+              <span class="step-badge" style="background: var(--accent-gold);">✔</span>
+              <div class="step-body">
+                <strong>Clareza e Transparência:</strong>
+                <p>Explique com exatidão onde o usuário irá ao clicar e declare abertamente que se trata de um link de indicação parceira.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge" style="background: var(--accent-gold);">✔</span>
+              <div class="step-body">
+                <strong>Conformidade e Compliance:</strong>
+                <p>Respeite rigorosamente as políticas de anúncios da Meta, Google e TikTok. Evite bloqueios desnecessários.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge" style="background: var(--accent-gold);">✔</span>
+              <div class="step-body">
+                <strong>Sem Spam ou Contas Falsas:</strong>
+                <p>Nunca faça spam em grupos ou crie cadastros fictícios. Programas de corretoras detectam fraudes via IP e bloqueiam saques.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-badge" style="background: var(--accent-gold);">✔</span>
+              <div class="step-body">
+                <strong>Sem Promessas Irreais:</strong>
+                <p>Não garanta rentabilidade fixa nem pressione pessoas a depositar. A credibilidade é seu patrimônio mais valioso.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 6 -->
+      <section class="ebook-chapter page-break-before" id="capitulo-6">
+        <div class="chapter-header">
+          <span class="chapter-badge">Capítulo 06</span>
+          <h2 class="chapter-title">Plano de Ação para Iniciantes (7 Dias)</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Para colocar a teoria em prática sem sobrecarga mental, siga esta rotina estruturada durante sua primeira semana:
+          </p>
+
+          <div class="checklist" id="plan-checklist">
+            <div class="check-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="d1">
+              <span class="check-day">DIA 01</span>
+              <span class="check-text">Estude o funcionamento dos programas de afiliados e modelos de comissão (CPA vs RevShare).</span>
+            </div>
+            <div class="check-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="d2">
+              <span class="check-day">DIA 02</span>
+              <span class="check-text">Escolha os 2 ou 3 programas que deseja conhecer a fundo e leia os termos de uso.</span>
+            </div>
+            <div class="check-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="d3">
+              <span class="check-day">DIA 03</span>
+              <span class="check-text">Conclua seus cadastros com dados reais e envie documentos de verificação de identidade.</span>
+            </div>
+            <div class="check-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="d4">
+              <span class="check-day">DIA 04</span>
+              <span class="check-text">Organize seus links de indicação, crie tags de rastreamento e salve em uma planilha.</span>
+            </div>
+            <div class="check-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="d5">
+              <span class="check-day">DIA 05</span>
+              <span class="check-text">Produza seu primeiro conteúdo educativo (um carrossel ou vídeo explicando conceitos básicos).</span>
+            </div>
+            <div class="check-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="d6">
+              <span class="check-day">DIA 06</span>
+              <span class="check-text">Publique a apresentação do seu projeto e ofereça este ebook gratuito como isca digital.</span>
+            </div>
+            <div class="check-item" onclick="toggleCheck(this)">
+              <input type="checkbox" id="d7">
+              <span class="check-day">DIA 07</span>
+              <span class="check-text">Analise as dúvidas recebidas no direct/comentários e planeje a pauta da próxima semana.</span>
+            </div>
+          </div>
+
+          <div class="callout callout-tip">
+            <h4>📌 Nota Importante sobre o Cronograma</h4>
+            <p style="margin: 0; color: #cbd5e1; font-size: 0.92rem;">
+              Esse plano é uma sugestão para manter foco e organização mental, não uma promessa mágica de aprovação ou conversões instantâneas em sete dias. Seja perseverante.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATOS OFICIAIS -->
+      <section class="ebook-chapter page-break-before" id="contatos">
+        <div class="contacts-box">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 0.75rem;">
+            <div class="author-avatar" style="width: 52px; height: 52px; font-size: 1.2rem;">FP</div>
+            <div>
+              <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; font-weight: 800;">
+                FP TRADER — Felipe Vieira
+              </h3>
+              <p style="color: var(--accent-green); font-size: 0.9rem; font-weight: 600;">
+                Canais Oficiais de Suporte e Acompanhamento
+              </p>
+            </div>
+          </div>
+          
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+            Utilize os canais abaixo para tirar dúvidas sobre o material, relatar dificuldades com cadastros e acompanhar as próximas atualizações do projeto. Em breve, novas corretoras e ferramentas serão adicionadas.
+          </p>
+
+          <div class="contact-grid">
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/5532984167034" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div style="font-size: 1.6rem;">💬</div>
+              <div class="contact-info">
+                <h5>WhatsApp Oficial</h5>
+                <p>+55 32 98416-7034</p>
+              </div>
+            </a>
+
+            <!-- TELEGRAM -->
+            <a href="https://t.me/chefe_fp_vieira" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div style="font-size: 1.6rem;">✈️</div>
+              <div class="contact-info">
+                <h5>Telegram Pessoal</h5>
+                <p>@chefe_fp_vieira</p>
+              </div>
+            </a>
+
+            <!-- INSTAGRAM -->
+            <a href="https://instagram.com/f.vieiraaaa" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div style="font-size: 1.6rem;">📸</div>
+              <div class="contact-info">
+                <h5>Instagram Oficial</h5>
+                <p>@f.vieiraaaa</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- AVISO IMPORTANTE -->
+      <section class="ebook-chapter" id="aviso">
+        <div class="callout callout-warning" style="margin-top: 2rem;">
+          <h4>⚖️ AVISO LEGAL E REGULATÓRIO IMPORTANTE</h4>
+          <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.8rem;">
+            Este ebook tem finalidade <strong>exclusivamente educativa e informativa</strong>. Não constitui recomendação individual de investimento, consultoria financeira, promessa de rentabilidade ou garantia de aprovação em programas de afiliados.
+          </p>
+          <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.8rem;">
+            Opções binárias, Forex, criptomoedas e derivativos financeiros podem envolver perdas financeiras significativas, inclusive perda total do capital alocado. Avalie os riscos, a situação regulatória e os termos de cada plataforma antes de tomar qualquer decisão financeira.
+          </p>
+          <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.8rem;">
+            Os links apresentados ao longo deste material contêm mecanismos de rastreamento de afiliados. O autor e responsável pelo material poderá receber remuneração se determinadas condições contratuais do programa forem cumpridas. Isso não significa que qualquer cadastro, depósito ou negociação seja obrigatório para os leitores.
+          </p>
+          <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; margin: 0;">
+            As marcas, regras, comissões e ofertas citadas pertencem aos seus respectivos proprietários e podem sofrer alterações sem aviso prévio. Confirme sempre as informações nos canais oficiais das plataformas antes de se registrar.
+          </p>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0 1rem 0; color: var(--text-dim); font-size: 0.85rem;">
+          <p style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 4px;">
+            MILLIONAIRE AFFILIATE TRADERS
+          </p>
+          <p style="color: var(--accent-green); font-weight: 600;">
+            Aprenda. Estude. Divulgue com responsabilidade.
+          </p>
+          <p style="margin-top: 8px;">
+            © 2026 FP TRADER — Felipe Vieira. Todos os direitos reservados.
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="copy-toast">Link copiado com sucesso!</div>
+
+  <script>
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Sidebar active item spy
+    const chapters = document.querySelectorAll('.ebook-chapter');
+    const navLinks = document.querySelectorAll('.nav-item a');
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      chapters.forEach(ch => {
+        const top = ch.offsetTop - 120;
+        if (window.scrollY >= top) {
+          currentId = ch.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentId) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Interactive Checklist
+    function toggleCheck(item) {
+      const cb = item.querySelector('input[type="checkbox"]');
+      cb.checked = !cb.checked;
+      if (cb.checked) {
+        item.classList.add('completed');
+      } else {
+        item.classList.remove('completed');
+      }
+    }
+
+    // Prevent double toggle when clicking directly on checkbox
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const parent = cb.closest('.check-item');
+        if (cb.checked) {
+          parent.classList.add('completed');
+        } else {
+          parent.classList.remove('completed');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
